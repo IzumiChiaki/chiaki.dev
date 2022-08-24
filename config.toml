@@ -230,21 +230,21 @@ uglyURLs = false
     #     identifier = "search"
     #     post = "search"
     [[menu.main]]
-        pageref = "/life/"
+        url = "/life/"
         name = "生活"
         weight = 1
         pre = "internal"
         post = "grav"
         identifier = "life"
     [[menu.main]]
-        pageref = "/tech/"
+        url = "/tech/"
         name = "技术"
         weight = 2
         pre = "internal"
         post = "wpexplorer"
         identifier = "tech"
     [[menu.main]]
-        pageref = "/about/"
+        url = "/about/"
         name = "关于"
         weight = 3
         pre = "internal"
@@ -295,7 +295,7 @@ uglyURLs = false
 #        weight = 1
 #        pre = "internal"
     [[menu.links]]
-        pageref = "/tags/"
+        url = "/tags/"
         name = "Tags"
         weight = 1
         pre = "internal"
@@ -1525,7 +1525,7 @@ uglyURLs = false
     #     post = "user-circle"
     #     identifier = "about"
     [[languages.en.menu.main]]
-        pageref = "/about/"
+        url = "/about/"
         name = "about"
         weight = 1
         pre = "internal"
