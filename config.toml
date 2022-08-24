@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://wondrous-puppy-854f32.netlify.app/"
+baseURL = "https://chiaki.netlify.app/"
 title = "Chiaki's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -104,7 +104,7 @@ uglyURLs = false
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = "https://wondrous-puppy-854f32.netlify.app/"
+    website = "https://chiaki.netlify.app/"
     # 推特
     twitter = "chiaki"
 
