@@ -42,7 +42,7 @@ paginate = 5
 # URL 相关
 disablePathToLower = false
 relativeURLs = true
-uglyURLs = true
+uglyURLs = false
 
 # URL 结构
 [permalinks]
