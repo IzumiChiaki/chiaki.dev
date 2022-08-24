@@ -2,7 +2,7 @@
 title = "单例模式"
 date = "2020-07-30T23:31:29+08:00"
 tags = ["java", "design pattern"]
-slug = "factory-pattern"
+slug = "singleton-pattern"
 dropCap = false
 +++
 
