@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://io-oi.me/"
+baseURL = "https://wondrous-puppy-854f32.netlify.app"
 title = "Chiaki's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -96,17 +96,17 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "reuixiy"
+    name = "chiaki"
     # 邮箱
-    email = "reuixiy@gmail.com"
+    email = "ustbcl@gmail.com"
     # 座右铭或简介
-    motto = "Viva La Vida"
+    motto = "Be a serendipper"
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
     website = "https://io-oi.me/"
     # 推特
-    twitter = "reuixiy"
+    twitter = "chiaki"
 
 # 相关文章
 [related]
@@ -273,37 +273,37 @@ uglyURLs = false
 
     ## 社交栏
     [[menu.socials]]
-        url = "https://github.com/reuixiy"
+        url = "https://github.com/IzumiChiaki"
         name = "GitHub"
         weight = 1
         pre = "external"
-    [[menu.socials]]
-        url = "https://t.me/yixiuer"
-        name = "Telegram"
-        weight = 2
-        pre = "external"
-    [[menu.socials]]
-        url = "https://twitter.com/reuixiy"
-        name = "Twitter"
-        weight = 3
-        pre = "external"
+#    [[menu.socials]]
+#        url = "https://t.me/yixiuer"
+#        name = "Telegram"
+#        weight = 2
+#        pre = "external"
+#    [[menu.socials]]
+#        url = "https://twitter.com/reuixiy"
+#        name = "Twitter"
+#        weight = 3
+#        pre = "external"
 
     ## 链接栏
-    [[menu.links]]
-        pageref = "/"
-        name = "Home"
-        weight = 1
-        pre = "internal"
+#    [[menu.links]]
+#        pageref = "/"
+#        name = "Home"
+#        weight = 1
+#        pre = "internal"
     [[menu.links]]
         pageref = "/tags/"
         name = "Tags"
-        weight = 2
+        weight = 1
         pre = "internal"
-    [[menu.links]]
-        pageref = "/coldplay/"
-        name = "Coldplay"
-        weight = 3
-        pre = "internal"
+#    [[menu.links]]
+#        pageref = "/coldplay/"
+#        name = "Coldplay"
+#        weight = 3
+#        pre = "internal"
 
 
 
@@ -388,7 +388,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["暗夜中", "渴望一束光的关怀", "在白天", "却更渴望黑洞的吞噬", "因为好奇心，想看看黑暗中有什么"]
+    homePoetry = ["沉淀技术", "记录生活", "邂逅点滴美好"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -413,16 +413,16 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "这是 reuixiy 的生活与技术博客！怎么记住 reuixiy 呢？其实就是「一休儿」的拼音，只不过顺序是从右往左……"
+    siteDescription = "这是 chiaki 的生活与技术博客！"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
     # 站点的创建时间
-    siteCreatedTime = "2017-05-27T15:13:14+08:00"
+    siteCreatedTime = "2022-08-24T15:13:14+08:00"
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "reuixiy"
+    # siteTwitter = "reuixiy"
     # 说明：用于 Twitter Cards
 
 
@@ -1155,9 +1155,9 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 仓库地址
-    repoURL = "https://github.com/reuixiy/io-oi.me"
+    repoURL = "https://github.com/IzumiChiaki/chiaki.dev"
     # 编辑地址
-    repoEditURL = "https://github.com/reuixiy/io-oi.me/blob/master"
+    repoEditURL = "https://github.com/IzumiChiaki/chiaki.dev"
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1538,8 +1538,8 @@ uglyURLs = false
         weight = 3
         identifier = "lang-switcher"
 [languages.en.params]
-    homePoetry = ["In the dark night", "Longing for a light of care", "In the daylight", "Desiring for the swallow of a black hole", "’Cause curiosity—seeks for what’s in the darkness"]
-    siteDescription = "Blog of reuixiy in English."
+    homePoetry = ["Gathering techs", "Record life", "Be a serendipper"]
+    siteDescription = "Blog of chiaki in English."
     listDateFormat = "January 2"
     fontFamilyTitle = "'Amstelvar', serif"
     fontFamilyHeadings = "'Amstelvar', serif"
