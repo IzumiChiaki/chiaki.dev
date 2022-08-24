@@ -413,7 +413,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "这是 chiaki 的生活与技术博客！"
+    siteDescription = "这是 chiaki 的技术与生活博客！"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
