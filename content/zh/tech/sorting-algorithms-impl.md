@@ -2,30 +2,30 @@
 title = "排序算法实现"
 date = "2020-08-03T20:53:19+08:00"
 tags = ["java", "algorithm", "sort"]
-slug = "sorting-algorithms"
+slug = "sorting-algorithms-impl"
 dropCap = false
 +++
 
 ##### 分类
 
-|类别|算法|
-| ---- | ---- |
-|插入排序类|插入排序、希尔排序|
-|选择排序类|选择排序、堆排序|
-|交换排序类|冒泡排序、快速排序|
-|归并排序类|归并排序|
+| 类别    | 算法        |
+|-------|-----------|
+| 插入排序类 | 插入排序、希尔排序 |
+| 选择排序类 | 选择排序、堆排序  |
+| 交换排序类 | 冒泡排序、快速排序 |
+| 归并排序类 | 归并排序      |
 
 ##### 复杂度
 
-|算法|平均情况|最好情况|最坏情况|辅助空间|稳定性|复杂性|
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-|冒泡排序|O(n^2)|O(n)|O(n^2)|O(1)|稳定|简单|
-|选择排序|O(n^2)|O(n^2)|O(n^2)|O(1)|稳定|简单|
-|插入排序|O(n^2)|O(n)|O(n^2)|O(1)|稳定|简单|
-|希尔排序|O(nlogn)~O(n^2)|O(n^1.3)|O(n^2)|O(1)|不稳定|较复杂|
-|堆排序|O(nlogn)|O(nlogn)|O(nlogn)|O(1)|不稳定|较复杂|
-|归并排序|O(nlogn)|O(nlogn)|O(nlogn)|O(n)|稳定|较复杂|
-|快速排序|O(nlogn)|O(nlogn)|O(n^2)|O(logn)~O(n)|不稳定|较复杂|
+| 算法   | 平均情况            | 最好情况     | 最坏情况     | 辅助空间         | 稳定性 | 复杂性 |
+|------|-----------------|----------|----------|--------------|-----|-----|
+| 冒泡排序 | O(n^2)          | O(n)     | O(n^2)   | O(1)         | 稳定  | 简单  |
+| 选择排序 | O(n^2)          | O(n^2)   | O(n^2)   | O(1)         | 稳定  | 简单  |
+| 插入排序 | O(n^2)          | O(n)     | O(n^2)   | O(1)         | 稳定  | 简单  |
+| 希尔排序 | O(nlogn)~O(n^2) | O(n^1.3) | O(n^2)   | O(1)         | 不稳定 | 较复杂 |
+| 堆排序  | O(nlogn)        | O(nlogn) | O(nlogn) | O(1)         | 不稳定 | 较复杂 |
+| 归并排序 | O(nlogn)        | O(nlogn) | O(nlogn) | O(n)         | 稳定  | 较复杂 |
+| 快速排序 | O(nlogn)        | O(nlogn) | O(n^2)   | O(logn)~O(n) | 不稳定 | 较复杂 |
 
 ##### 算法实现：排序算法类Sort
 
@@ -42,8 +42,8 @@ public class Sort {
      * @param arr 原数组
      */
     public static void printArr(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
@@ -183,13 +183,13 @@ public class Sort {
         // 根据完全二叉树的性质得到左孩子和右孩子的索引
         int left = 2 * index + 1;
         int right = 2 * index + 2;
-        // 将当前索引index设置为最大值索引maxindex
+        // 将当前索引index设置为最大值索引maxIndex
         int maxIndex = index;
-        // 若左孩子结点值比最大值索引结点值大则更新maxindex
+        // 若左孩子结点值比最大值索引结点值大则更新maxIndex
         if (left < size && arr[left] > arr[maxIndex]) {
             maxIndex = left;
         }
-        // 若右孩子结点值比最大值索引结点值大则更新maxindex
+        // 若右孩子结点值比最大值索引结点值大则更新maxIndex
         if (right < size && arr[right] > arr[maxIndex]) {
             maxIndex = right;
         }
@@ -422,5 +422,6 @@ public class SortTest {
     }
 }
 ```
+---
 
-#### 结果显示上述算法均通过测试。
+结果显示上述算法均通过测试。
