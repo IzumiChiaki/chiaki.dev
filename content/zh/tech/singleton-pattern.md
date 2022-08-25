@@ -12,7 +12,8 @@ Java的单例模式是一种常见设计模式，单例模式的写法主要有�
 - 单例类必须自己创建自己的唯一实例
 - 单例类必须给所有其他对提供这一实例
 
-单例模式确保某个类只有一个实例，而且自行实例化并向整个系统提供这个实例。在计算机系统中，线程池、缓存、日志对象、对话框、打印机、显卡的驱动程序对象常被设计成单例。这些应用都或多或少具有资源管理器的功能。每台计算机可以有若干个打印机，但只能有一个Printer Spooler，以避免两个打印作业同时输出到打印机中。每台计算机可以有若干通信端口，系统应当集中管理这些通信端口，以避免一个通信端口同时被两个请求同时调用。总之，选择单例模式就是为了避免不一致状态。
+单例模式确保某个类只有一个实例，而且自行实例化并向整个系统提供这个实例。在计算机系统中，线程池、缓存、日志对象、对话框、打印机、显卡的驱动程序对象常被设计成单例。这些应用都或多或少具有资源管理器的功能。每台计算机可以有若干个打印机，但只能有一个Printer
+Spooler，以避免两个打印作业同时输出到打印机中。每台计算机可以有若干通信端口，系统应当集中管理这些通信端口，以避免一个通信端口同时被两个请求同时调用。总之，选择单例模式就是为了避免不一致状态。
 
 ##### 饿汉式
 
@@ -21,11 +22,12 @@ Java的单例模式是一种常见设计模式，单例模式的写法主要有�
 ```java
 public class Singleton01 {
     // 将构造器私有化，防止直接new
-    private Singleton01() {}
-    
+    private Singleton01() {
+    }
+
     // 创建一个静态Singleton01对象实例
     private static Singleton01 instance = new Singleton01();
-    
+
     // 提供一个public的静态方法，可以返回instance
     public static Singleton01 getInstance() {
         return instance;
@@ -37,15 +39,16 @@ public class Singleton01 {
 
 ```java
 public class Singleton02 {
-    private Singleton02() {}
-    
+    private Singleton02() {
+    }
+
     private static Singleton instance;
-    
+
     // 使用静态代码块
     static {
         instance = new Singleton();
     }
-    
+
     public static Singleton getInstance() {
         return instance;
     }
@@ -63,10 +66,11 @@ public class Singleton02 {
 
 ```java
 public class Singleton03 {
-    private Singleton03() {}
-    
+    private Singleton03() {
+    }
+
     private static Singleton03 singleton;
-    
+
     // 当调用getInstance才创建单例对象
     public static Singleton03 getInstance() {
         if (singleton == null) {
@@ -78,7 +82,8 @@ public class Singleton03 {
 ```
 
 - 优点：起到了Lazying Loading的效果。
-- 缺点：只能在单线程下使用。如果在多线程下，一个线程进入了`if (sigleton == null)` 判断语句块还未来得及往下执行，另一个线程也通过了这个判断语句，这时就会产生多个实例。所以在多线程环境下不可使用这种方式。
+- 缺点：只能在单线程下使用。如果在多线程下，一个线程进入了`if (sigleton == null)`
+  判断语句块还未来得及往下执行，另一个线程也通过了这个判断语句，这时就会产生多个实例。所以在多线程环境下不可使用这种方式。
 
 结论：实际开发中**不要**使用这种方式。
 
@@ -86,10 +91,11 @@ public class Singleton03 {
 
 ```java
 public class Singleton04 {
-	private Singleton04() {}
-    
+    private Singleton04() {
+    }
+
     private static Singleton04 singleton;
-    
+
     // 使用synchronized给方法加锁
     public static synchronized Singleton04 getInstance() {
         if (singleton == null) {
@@ -101,7 +107,8 @@ public class Singleton04 {
 ```
 
 - 优点：**解决了线程不安全问题**。
-- 缺点：效率太低。每个线程在想获得类的实例时，执行`getInstance()`方法都要进行同步，其实该方法只执行一次实例化代码就够了，后面的线程想过的该类实例，直接`return`就行，方法进行同步导致效率太低。
+- 缺点：效率太低。每个线程在想获得类的实例时，执行`getInstance()`
+  方法都要进行同步，其实该方法只执行一次实例化代码就够了，后面的线程想过的该类实例，直接`return`就行，方法进行同步导致效率太低。
 
 结论：实际开发中**不推荐**使用这种方式。
 
@@ -109,10 +116,11 @@ public class Singleton04 {
 
 ```java
 public class Singleton05 {
-    private Singleton05() {}
-    
+    private Singleton05() {
+    }
+
     private static Singleton05 singleton;
-    
+
     public static Singleton05 getInstance() {
         if (singleton == null) {
             synchronized (Singleton05.class) {
@@ -125,7 +133,8 @@ public class Singleton05 {
 ```
 
 - 优点：本意是对第四种实现方式的改进。
-- 缺点：并**不能起到线程同步的作用**。与第三种实现方式一致，如果在多线程下，一个线程进入了`if (sigleton == null)` 判断语句块还未来得及往下执行，另一个线程也通过了这个判断语句，这时就会产生多个实例。
+- 缺点：并**不能起到线程同步的作用**。与第三种实现方式一致，如果在多线程下，一个线程进入了`if (sigleton == null)`
+  判断语句块还未来得及往下执行，另一个线程也通过了这个判断语句，这时就会产生多个实例。
 
 结论：实际开发中**不能**使用这种方式。
 
@@ -135,10 +144,11 @@ public class Singleton05 {
 
 ```java
 public class Singleton06 {
-    private Singleton06() {}
-    
+    private Singleton06() {
+    }
+
     private volatile static Singleton06 singleton;
-    
+
     public static Singleton06 getInstance() {
         // 第一重检查
         if (singleton == null) {
@@ -167,12 +177,13 @@ public class Singleton06 {
 
 ```java
 public class Singleton07 {
-    private Singleton07() {}
-    
+    private Singleton07() {
+    }
+
     private static class SingletonInstance {
         private static final Singleton07 INSTANCE = new Singleton07();
     }
-    
+
     public static Singleton07 getInstance() {
         return SingletonInstance.INSTANCE;
     }
@@ -180,7 +191,8 @@ public class Singleton07 {
 ```
 
 - 采用类装载的机制来保证初始化实例时只有一个线程。
-- 静态内部类方式在`Singleton07`类被装载时并不会立即实例化，而是在需要实例化时调用`getInstance`方法，才会装载`SingletonInstance`类，从而完成`Singleton07`的实例化。
+- 静态内部类方式在`Singleton07`类被装载时并不会立即实例化，而是在需要实例化时调用`getInstance`
+  方法，才会装载`SingletonInstance`类，从而完成`Singleton07`的实例化。
 - 类的静态属性只会在第一次加载类的时候初始化，所以这里JVM帮助保证了**线程的安全性**，在类进行初始化时，别的线程无法进入。
 - 优点：**避免了线程不安全，利用静态内部类特点实现延迟加载，效率高**。
 
@@ -193,7 +205,9 @@ public class Singleton07 {
 ```java
 enum Singleton08 {
     INSTANCE;
-    public void anyMethod() {}
+
+    public void anyMethod() {
+    }
 }
 ```
 
