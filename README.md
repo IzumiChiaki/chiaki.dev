@@ -1,2 +1,2 @@
 ### chiaki.dev
-[chiaki.netlify.app](https://chaiki.netlify.app)
+[chiaki.netlify.app](https://chiaki.netlify.app)
