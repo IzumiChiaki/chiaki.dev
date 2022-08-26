@@ -1538,7 +1538,7 @@ uglyURLs = false
         weight = 3
         identifier = "lang-switcher"
 [languages.en.params]
-    homePoetry = ["Gathering techs", "Record life", "Be a serendipper"]
+    homePoetry = ["Gathering technology", "Record life", "Be a serendipper"]
     siteDescription = "Blog of chiaki in English."
     listDateFormat = "January 2"
     fontFamilyTitle = "'Amstelvar', serif"
