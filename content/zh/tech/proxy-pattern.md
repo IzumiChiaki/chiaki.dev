@@ -14,7 +14,7 @@ dropCap = false
 + 代理模式有三种不同形式，主要有**静态代理**、**动态代理**（JDK代理/接口代理）以及**Cglib代理**
   （可以在内存中动态地创建对象，而不需要实现接口，也属于动态代理的范畴）。
 
-![proxy.png](/images/proxy.png)
+![proxy.png](/images/proxy-pattern/proxy.png)
 
 ##### 静态代理
 
@@ -22,7 +22,7 @@ dropCap = false
 
 ##### 案例：👩‍🏫授课（一）
 
-![static-proxy.png](/images/static-proxy.png)
+![static-proxy.png](/images/proxy-pattern/static-proxy.png)
 
 **ITeacherDao接口**：
 
@@ -109,7 +109,7 @@ static Object newProxyInstance(ClassLoader loader, Class<?>[] interface, Invocat
 
 将👩‍🏫授课案例（一）改进成为动态代理。
 
-![dynamic-proxy.png](/images/dynamic-proxy.png)
+![dynamic-proxy.png](/images/proxy-pattern/dynamic-proxy.png)
 
 **ITeacherDao接口**：
 
@@ -213,7 +213,7 @@ public class Client {
 
 将前面的案例用Cglib代理实现。
 
-![cglib-proxy.png](/images/cglib-proxy.png)
+![cglib-proxy.png](/images/proxy-pattern/cglib-proxy.png)
 
 **目标对象TeacherDao，无需实现接口：**
 

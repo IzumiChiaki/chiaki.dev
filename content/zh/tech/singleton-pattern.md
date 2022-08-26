@@ -212,7 +212,7 @@ enum Singleton08 {
 ```
 
 - 借助JDK1.5中添加的枚举来实现单例模式。**不仅能够避免多线程同步问题，而且还能防止反序列化重新创建新的对象**。
-- 《Effective Java》的作者Josh Blosh提倡的方式。
+- 『*Effective Java*』的作者Josh Blosh提倡的方式。
 
 结论：实际开发中**推荐使用**。
 
@@ -220,7 +220,7 @@ enum Singleton08 {
 
 JDK中的`java.lang.Runtime`是典型的单例模式（饿汉式）
 
-![singleton-runtime.png](/images/singleton-runtime.png)
+![singleton-runtime.png](/images/singleton-pattern/singleton-runtime.png)
 
 ##### 总结
 

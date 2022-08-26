@@ -10,7 +10,7 @@ dropCap = false
 
 **动态地将新功能附加到对象上**。在对象功能扩展方面，他比继承更有弹性，装饰者模式也体现了**开闭原则**（OCP），其UML类图如下所示：
 
-![decorator-1.png](/images/decorator-1.png)
+![decorator-1.png](/images/decorator-pattern/decorator-1.png)
 
 ##### 案例：☕订单项目
 
@@ -24,19 +24,19 @@ dropCap = false
 
 利用装饰者设计模式来实现☕订单项目，其UML类图如下：
 
-![decorator-2.png](/images/decorator-2.png)
+![decorator-2.png](/images/decorator-pattern/decorator-2.png)
 
 ##### 装饰者模式下的订单
 
 不管是什么形式的单品咖啡+调料组合都可以通过**递归**进行方便的组合和维护。
 
-![decorator-3.png](/images/decorator-3.png)
+![decorator-3.png](/images/decorator-pattern/decorator-3.png)
 
 ##### 装饰者模式的JDK应用
 
 **Java的IO结构**
 
-![decorator-4.png](/images/decorator-4.png)
+![decorator-4.png](/images/decorator-pattern/decorator-4.png)
 
 ##### 装饰者模式的设计原则
 
