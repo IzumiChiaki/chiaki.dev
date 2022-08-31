@@ -1,6 +1,6 @@
 +++
 title = "JVM内存区域"
-date = "2020-08-10T20:53:19+08:00"
+date = "2020-08-08T20:53:19+08:00"
 tags = ["jvm"]
 slug = "jvm-memory-area"
 dropCap = false
